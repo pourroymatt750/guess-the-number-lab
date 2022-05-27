@@ -3,6 +3,7 @@ const game = {
     biggestNum: 100,
     smallestNum: 1,
     secretNum: null,
+    //total number guessses stored in array
     prevGuesses: [],
     play: function() {
       this.secretNum = Math.floor(Math.random() * 
