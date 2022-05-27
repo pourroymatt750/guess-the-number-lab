@@ -2,7 +2,7 @@ const game = {
     title: 'Guess the Number!',
     //Prompts player to guess a number between 1 - 100
     getGuess() {
-        return `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
+        return `Enter a guess between ${smallestNum} and ${biggestNum}`
     },
     biggestNum: 100,
     smallestNum: 1,
