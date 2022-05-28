@@ -14,12 +14,6 @@ const game = {
                 return 'Error, only numeric gusses between 1 - 100 allowed.'
             }
         }
-
-        // while (parseInt(num) !== NaN) {
-        //     if (num >= 1 && num <= 100) {
-        //         return num
-        //     } 
-        // }
     },
     secretNum: null,
     //total number guessses stored in array
@@ -27,6 +21,12 @@ const game = {
     play: function() {
       this.secretNum = Math.floor(Math.random() * 
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
-    }
+        //Invokes getGuess() and adds new guess to prevGuesses[]
+        let userGuess = ' '
+        while (userGuess === true) {
+            getGuess().push(prevGuesses)
+        }
   }
+  
+}
 
