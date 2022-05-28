@@ -3,8 +3,23 @@ const game = {
     biggestNum: 100,
     smallestNum: 1,
     //Prompts player to guess a number between 1 - 100
-    getGuess: function() {
+    getGuess: function(num) {
         prompt(`Enter a guess between ${game.smallestNum} and ${game.biggestNum}`)
+        //Ensures user entry is a number not string and is between 1 - 100
+        let parsed = parseInt(num)
+        while (parsed !== NaN) {
+            if (parsed >= 1 && parsed <= 100) {
+                return parsed
+            } else {
+                return 'Error, only numeric gusses between 1 - 100 allowed.'
+            }
+        }
+
+        // while (parseInt(num) !== NaN) {
+        //     if (num >= 1 && num <= 100) {
+        //         return num
+        //     } 
+        // }
     },
     secretNum: null,
     //total number guessses stored in array
@@ -14,4 +29,4 @@ const game = {
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
     }
   }
-console.log(game.getGuess())
+
